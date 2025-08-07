@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🐍 Snake Game</h1>
+            <div class="score-container">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="high-score">High Score: <span id="highScore">0</span></div>
+            </div>
+        </header>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="gameOver" class="game-over hidden">
+                <h2>Game Over!</h2>
+                <p>Your Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn">Play Again</button>
+            </div>
+            <div id="startScreen" class="start-screen">
+                <h2>Welcome to Snake Game!</h2>
+                <p>Use arrow keys or WASD to control the snake</p>
+                <button id="startBtn">Start Game</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <h3>Controls:</h3>
+            <div class="control-grid">
+                <div class="control-row">
+                    <div class="control-key"></div>
+                    <div class="control-key">↑</div>
+                    <div class="control-key"></div>
+                </div>
+                <div class="control-row">
+                    <div class="control-key">←</div>
+                    <div class="control-key">↓</div>
+                    <div class="control-key">→</div>
+                </div>
+            </div>
+            <p>Or use WASD keys</p>
+            <div class="mobile-controls" id="mobileControls">
+                <div class="mobile-control-row">
+                    <button class="mobile-btn" data-direction="up">↑</button>
+                </div>
+                <div class="mobile-control-row">
+                    <button class="mobile-btn" data-direction="left">←</button>
+                    <button class="mobile-btn" data-direction="down">↓</button>
+                    <button class="mobile-btn" data-direction="right">→</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-info">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Control the snake to eat the red food</li>
+                <li>Each food eaten increases your score by 10</li>
+                <li>The snake grows longer with each food eaten</li>
+                <li>Don't hit the walls or yourself!</li>
+                <li>Game speed increases as your score grows</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Made with ❤️ | <a href="https://github.com" target="_blank">GitHub</a></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
